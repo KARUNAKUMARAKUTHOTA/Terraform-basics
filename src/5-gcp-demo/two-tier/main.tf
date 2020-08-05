@@ -1,18 +1,18 @@
 terraform {
   backend "gcs" {
-    bucket = "ca-demo-tf-state"
+    bucket = "ca-demo-tf-state-123"
     prefix = "terraform/state"
   }
 }
 
 provider "google" {
-  version = "~> 1.7"
-  project = "cloud-academy-terraform"
+  version = "~> 2.5"
+  project = "terraform-cloudacademy-intro"
   region  = "${var.region}"
 }
 
 provider "kubernetes" {
-  version = "1.0.1"
+  version = "~> 1.6"
 
   host     = "${google_container_cluster.primary.endpoint}"
   username = "${google_container_cluster.primary.master_auth.0.username}"

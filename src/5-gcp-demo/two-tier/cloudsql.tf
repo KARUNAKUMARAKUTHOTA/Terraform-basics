@@ -11,7 +11,7 @@ resource "google_sql_database_instance" "sql_master" {
     disk_autoresize = true
 
     ip_configuration {
-      authorized_networks = {
+      authorized_networks {
         value = "0.0.0.0/0"
       }
 
