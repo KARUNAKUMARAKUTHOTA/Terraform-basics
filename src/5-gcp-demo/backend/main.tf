@@ -1,11 +1,11 @@
 provider "google" {
   version = "~> 2.5"
-  project = "terraform-cloudacademy-intro"
+  project = "cloud-academy-terraform"
   region  = "us-central1"
 }
 
 resource "google_storage_bucket" "backend" {
-  name     = "ca-demo-tf-state-123"
+  name     = "ca-demo-tf-state"
   location = "US"
   force_destroy = "true"
 }
